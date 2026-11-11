@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>София Шумилина — маникюр и педикюр в Волосово</title>
+  <meta name="description" content="Маникюр и педикюр, в который хочется возвращаться. Эстетика, стерильность и сервис в кабинете. София Шумилина, г. Волосово.">
+  <meta name="theme-color" content="#F4EDE6">
+  <!-- Сайт пока открыт только по ссылке: просим поисковики не показывать его в выдаче.
+       Когда клиентка одобрит и сайт пойдёт «в люди» — удалить эту строку. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Включаем анимации, только если человек не просил в системе «уменьшить движение».
+       Если script.js почему-то не загрузится за 3,5 с — анимации снимаются, и всё видно сразу. -->
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () {
+        if (!window.__motionReady) document.documentElement.classList.remove('motion');
+      }, 3500);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:ital,wght@0,500;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- ===== ШАПКА ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="#top">
+        <span class="logo__name">София Шумилина</span>
+        <span class="logo__sub">маникюр и педикюр · Волосово</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#works">Мои работы</a>
+        <a href="#prices">Услуги</a>
+        <a href="#certificates">Сертификаты</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts" class="nav__cta">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== ПЕРВЫЙ ЭКРАН ===== -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            Маникюр и&nbsp;педикюр, в&nbsp;который
+            <span class="hand hero__hand">хочется возвращаться</span>
+          </h1>
+
+          <ul class="hero__lines">
+            <li>Эстетика, стерильность и&nbsp;сервис в&nbsp;кабинете</li>
+            <li>Профессиональный уход за&nbsp;руками и&nbsp;ногами</li>
+          </ul>
+
+          <div class="hero__buttons">
+            <!-- Личные сообщения страницы Софии ВК (по её просьбе, не сообщения группы) -->
+            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">
+              Записаться в&nbsp;ВК
+            </a>
+            <a class="btn btn--ghost" href="tel:+79992381992">Позвонить</a>
+          </div>
+
+          <!-- Короткие факты — всё взято с сайта: отзывы ВК, «Обо мне», грамота -->
+          <ul class="hero__facts">
+            <li><a href="#reviews"><b>5,0&nbsp;★</b> 33&nbsp;отзыва ВКонтакте</a></li>
+            <li><b>7&nbsp;лет</b> опыта</li>
+            <li><b>1&nbsp;место</b> на&nbsp;чемпионате KANE&nbsp;2026</li>
+          </ul>
+        </div>
+
+        <figure class="hero__photo">
+          <span class="blob blob--sage" aria-hidden="true"></span>
+          <span class="sprig sprig--hero" data-sprig data-sprig-delay="1.3" aria-hidden="true"></span>
+          <span class="leaf-outline" aria-hidden="true"></span>
+          <div class="leaf">
+            <img src="img/sofia.webp" alt="София Шумилина, мастер маникюра и педикюра" width="751" height="1000" fetchpriority="high">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== ОБО МНЕ ===== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title">Обо мне</h2>
+        <span class="sprig sprig--about" data-sprig aria-hidden="true"></span>
+
+        <div class="about__facts">
+          <div class="fact fact--years">
+            <p class="fact__big">7</p>
+            <p class="fact__text">лет опыта</p>
+          </div>
+          <div class="fact">
+            <p class="fact__text fact__text--lead">Комфортная обстановка и&nbsp;индивидуальный подход</p>
+          </div>
+          <div class="fact">
+            <p class="fact__text">
+              Участник и&nbsp;победитель Всероссийского чемпионата по&nbsp;педикюру KANE&nbsp;2026
+              в&nbsp;категории&nbsp;«Юниор»
+            </p>
+          </div>
+        </div>
+
+        <!-- Фото с чемпионата KANE 2026 -->
+        <div class="about__photos">
+          <a class="zoom about__photo about__photo--cup" href="img/about/champ-cup.webp" data-gallery="about">
+            <img src="img/about/champ-cup.webp" alt="София с кубком и медалью за 1 место на чемпионате KANE 2026" width="759" height="900" loading="lazy">
+          </a>
+          <a class="zoom about__photo about__photo--work" href="img/about/champ-work.webp" data-gallery="about">
+            <img src="img/about/champ-work.webp" alt="София выполняет педикюр на чемпионате KANE 2026" width="602" height="900" loading="lazy">
+          </a>
+          <a class="zoom about__photo about__photo--award" href="img/about/champ-award.webp" data-gallery="about">
+            <img src="img/about/champ-award.webp" alt="Награждение на чемпионате по педикюру KANE 2026" width="1100" height="718" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== СТЕРИЛЬНОСТЬ И СЕРВИС ===== -->
+    <!-- Слева — слова Софии из описания группы ВК, справа — фразы из отзывов клиенток (те же, что в блоке «Отзывы») -->
+    <section class="section care" id="care">
+      <div class="container">
+        <h2 class="section__title">Стерильность и&nbsp;сервис</h2>
+
+        <div class="care__body">
+          <ul class="care__points">
+            <li>Все инструменты проходят обязательную обработку</li>
+            <li>Оборудовано специальное помещение</li>
+          </ul>
+
+          <div class="care__side">
+            <p class="care__label">Что замечают клиентки:</p>
+            <div class="care__quotes">
+              <figure class="care__quote">
+                <blockquote>Сервис на&nbsp;высшем уровне, все стерильно, чисто</blockquote>
+                <figcaption>Жаннет З.</figcaption>
+              </figure>
+              <figure class="care__quote">
+                <blockquote>Всегда чисто и&nbsp;рабочее место без единой пыли, это очень важный момент</blockquote>
+                <figcaption>Светлана Б.</figcaption>
+              </figure>
+              <figure class="care__quote">
+                <blockquote>Полностью оборудовано помещение, чистое, светлое... София всегда в&nbsp;спец. одежде</blockquote>
+                <figcaption>Светлана У.</figcaption>
+              </figure>
+              <figure class="care__quote">
+                <blockquote>Все инструменты чистенькие</blockquote>
+                <figcaption>Олька М.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== МОИ РАБОТЫ ===== -->
+    <!-- Нажатие на фото открывает его крупно (файл *-big.webp) -->
+    <section class="section works" id="works">
+      <div class="container">
+        <h2 class="section__title">Мои работы</h2>
+
+        <!-- 6 фото «рамкой»: листики по углам, круг и овал в центре -->
+        <div class="works__grid">
+          <a class="zoom works__item works__item--1" href="img/works/w01-big.webp" data-gallery="works"><img src="img/works/w01.webp" alt="Маникюр: бордовый с блёстками" width="600" height="800" loading="lazy"></a>
+          <a class="zoom works__item works__item--2" href="img/works/w02-big.webp" data-gallery="works"><img src="img/works/w02.webp" alt="Маникюр: белое покрытие, квадратная форма" width="769" height="800" loading="lazy"></a>
+          <a class="zoom works__item works__item--3" href="img/works/w03-big.webp" data-gallery="works"><img src="img/works/w03.webp" alt="Маникюр: тёмно-синий с блёстками" width="529" height="800" loading="lazy"></a>
+          <a class="zoom works__item works__item--4" href="img/works/w04-big.webp" data-gallery="works"><img src="img/works/w04.webp" alt="Маникюр: молочное покрытие, миндальная форма" width="574" height="800" loading="lazy"></a>
+          <a class="zoom works__item works__item--5" href="img/works/w05-big.webp" data-gallery="works"><img src="img/works/w05.webp" alt="Маникюр: розовый с мерцанием" width="609" height="800" loading="lazy"></a>
+          <a class="zoom works__item works__item--6" href="img/works/w06-big.webp" data-gallery="works"><img src="img/works/w06.webp" alt="Маникюр: красный с дизайном на одном ногте" width="600" height="800" loading="lazy"></a>
+        </div>
+
+        <!-- Остальные работы — по кнопке «Показать ещё» -->
+        <div class="works__more more__rest" id="works-more" hidden>
+          <a class="zoom works__cell" href="img/works/w07-big.webp" data-gallery="works"><img src="img/works/w07.webp" alt="Маникюр: лавандовый френч со стразами" width="614" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w08-big.webp" data-gallery="works"><img src="img/works/w08.webp" alt="Маникюр: тёмно-красный, миндальная форма" width="600" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w09-big.webp" data-gallery="works"><img src="img/works/w09.webp" alt="Маникюр: нюд с серебристыми блёстками" width="770" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w10-big.webp" data-gallery="works"><img src="img/works/w10.webp" alt="Педикюр с сиреневым покрытием" width="800" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w11-big.webp" data-gallery="works"><img src="img/works/w11.webp" alt="Маникюр: нежно-розовый с блёстками" width="682" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w12-big.webp" data-gallery="works"><img src="img/works/w12.webp" alt="Маникюр: чёрное покрытие" width="505" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w13-big.webp" data-gallery="works"><img src="img/works/w13.webp" alt="Маникюр: красное покрытие" width="761" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w14-big.webp" data-gallery="works"><img src="img/works/w14.webp" alt="Педикюр: пятки до и после" width="800" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w15-big.webp" data-gallery="works"><img src="img/works/w15.webp" alt="Маникюр: тёмно-синий и молочный с дизайном" width="794" height="800" loading="lazy"></a>
+          <a class="zoom works__cell works__cell--wide" href="img/works/w16-big.webp" data-gallery="works"><img src="img/works/w16.webp" alt="Маникюр: розовый френч" width="800" height="428" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w17-big.webp" data-gallery="works"><img src="img/works/w17.webp" alt="Маникюр: нюдовое покрытие" width="800" height="792" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w18-big.webp" data-gallery="works"><img src="img/works/w18.webp" alt="Коррекция вросшего ногтя: до и после" width="800" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w19-big.webp" data-gallery="works"><img src="img/works/w19.webp" alt="Педикюр: стопы до и после" width="800" height="800" loading="lazy"></a>
+          <a class="zoom works__cell" href="img/works/w20-big.webp" data-gallery="works"><img src="img/works/w20.webp" alt="Подологический педикюр: до и после" width="800" height="800" loading="lazy"></a>
+        </div>
+
+        <div class="more__bar">
+          <button class="btn btn--ghost more__btn" type="button" aria-expanded="false" aria-controls="works-more"
+                  data-more-text="Показать ещё работы" data-less-text="Свернуть">Показать ещё работы</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== УСЛУГИ (ПРАЙС) ===== -->
+    <!-- Строки можно копировать: одна строка = одна услуга -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="prices__card">
+          <span class="sprig sprig--prices" data-sprig aria-hidden="true"></span>
+          <h2 class="section__title">Услуги</h2>
+
+          <div class="prices__cols">
+            <div>
+              <div class="prices__group">
+                <h3 class="prices__group-title">Маникюр</h3>
+                <ul class="price-list">
+                  <li><span class="price-list__name">Маникюр с&nbsp;однотонным покрытием <small>(укрепление входит в&nbsp;стоимость)</small></span><span class="price-list__price">2&nbsp;000&nbsp;₽</span></li>
+                  <li><span class="price-list__name">Комбинированный маникюр без&nbsp;покрытия</span><span class="price-list__price">1&nbsp;100&nbsp;₽</span></li>
+                  <li><span class="price-list__name">Ремонт ногтя</span><span class="price-list__price">100&nbsp;₽</span></li>
+                  <li><span class="price-list__name">Снятие моей работы</span><span class="price-list__price">бесплатно</span></li>
+                  <li><span class="price-list__name">Снятие чужой работы <small>(с&nbsp;последующим покрытием)</small></span><span class="price-list__price">200&nbsp;₽</span></li>
+                  <li><span class="price-list__name">Одно снятие</span><span class="price-list__price">500&nbsp;₽</span></li>
+                </ul>
+              </div>
+
+              <div class="prices__group">
+                <h3 class="prices__group-title">Дизайн</h3>
+                <ul class="price-list">
+                  <li><span class="price-list__name">Френч, растяжка на&nbsp;все пальчики, втирка</span><span class="price-list__price">+500&nbsp;₽</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="prices__group">
+              <h3 class="prices__group-title">Педикюр</h3>
+              <ul class="price-list">
+                <li><span class="price-list__name">Гигиенический с&nbsp;покрытием</span><span class="price-list__price">3&nbsp;200&nbsp;₽</span></li>
+                <li><span class="price-list__name">Гигиенический без&nbsp;покрытия</span><span class="price-list__price">3&nbsp;000&nbsp;₽</span></li>
+                <li><span class="price-list__name">Подологический без&nbsp;покрытия + зачистка <span class="nowrap">2-х&nbsp;пальцев</span></span><span class="price-list__price">3&nbsp;500&nbsp;₽</span></li>
+                <li><span class="price-list__name">Подологический без&nbsp;покрытия + зачистка всех пальцев</span><span class="price-list__price">4&nbsp;500–5&nbsp;000&nbsp;₽</span></li>
+                <li><span class="price-list__name">Коррекционная система «Лайт» на&nbsp;1&nbsp;ноготь с&nbsp;зачисткой <small>(при&nbsp;врастании)</small></span><span class="price-list__price">3&nbsp;000&nbsp;₽</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== СЕРТИФИКАТЫ ОБ ОБРАЗОВАНИИ ===== -->
+    <section class="section certs" id="certificates">
+      <svg class="wave wave--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 60V28C180 4 360 0 540 14s360 40 540 30S1320 8 1440 20v40z">
+          <animate attributeName="d" dur="9s" repeatCount="indefinite" calcMode="spline"
+                   keySplines=".45 0 .55 1; .45 0 .55 1"
+                   values="M0 60V28C180 4 360 0 540 14s360 40 540 30S1320 8 1440 20v40z;
+                           M0 60V20C180 14 360 12 540 24s360 24 540 16S1320 18 1440 28v40z;
+                           M0 60V28C180 4 360 0 540 14s360 40 540 30S1320 8 1440 20v40z"/>
+        </path>
+      </svg>
+      <div class="container">
+        <h2 class="section__title">Сертификаты об&nbsp;образовании</h2>
+        <p class="section__hint">листайте вбок →</p>
+      </div>
+      <div class="certs__track">
+        <!-- --ar = ширина / высота фото. Порядок подобран так, чтобы на ПК оба ряда были одной высоты -->
+        <a class="zoom certs__item" style="--ar: 1.379" href="img/certs/cert-1-big.webp" data-gallery="certs"><img src="img/certs/cert-1.webp" alt="Грамота за 1 место: V чемпионат по педикюру KANE 2026, категория «Юниор»" width="900" height="653" loading="lazy"></a>
+        <a class="zoom certs__item" style="--ar: 0.729" href="img/certs/cert-2-big.webp" data-gallery="certs"><img src="img/certs/cert-2.webp" alt="Сертификат KANE Professional: курс по методике «Stop Hidrosis»" width="656" height="900" loading="lazy"></a>
+        <a class="zoom certs__item" style="--ar: 1.429" href="img/certs/cert-4-big.webp" data-gallery="certs"><img src="img/certs/cert-4.webp" alt="Диплом школы Paris Nail" width="900" height="630" loading="lazy"></a>
+        <a class="zoom certs__item" style="--ar: 1.426" href="img/certs/cert-5-big.webp" data-gallery="certs"><img src="img/certs/cert-5.webp" alt="Диплом школы Paris Nail" width="900" height="631" loading="lazy"></a>
+        <a class="zoom certs__item" style="--ar: 0.709" href="img/certs/cert-3-big.webp" data-gallery="certs"><img src="img/certs/cert-3.webp" alt="Сертификат KANE Professional: курс по методике препаратно-аппаратного педикюра" width="638" height="900" loading="lazy"></a>
+        <a class="zoom certs__item" style="--ar: 1.422" href="img/certs/cert-6-big.webp" data-gallery="certs"><img src="img/certs/cert-6.webp" alt="Удостоверение о повышении квалификации" width="900" height="633" loading="lazy"></a>
+      </div>
+      <svg class="wave wave--bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0v30c200 26 380 30 560 16S900 2 1080 10s260 26 360 22V0z">
+          <animate attributeName="d" dur="11s" repeatCount="indefinite" calcMode="spline"
+                   keySplines=".45 0 .55 1; .45 0 .55 1"
+                   values="M0 0v30c200 26 380 30 560 16S900 2 1080 10s260 26 360 22V0z;
+                           M0 0v24c200 18 380 34 560 22S900 12 1080 18s260 18 360 16V0z;
+                           M0 0v30c200 26 380 30 560 16S900 2 1080 10s260 26 360 22V0z"/>
+        </path>
+      </svg>
+    </section>
+
+    <!-- ===== ОТЗЫВЫ ===== -->
+    <!-- Отзывы из раздела «Отзывы» группы ВК (vk.ru/reviews-183791063). Смысл не менялся,
+         поправлены только опечатки, заглавные буквы и пробелы у запятых. Имена — имя и первая буква фамилии.
+         Первые 6 видны сразу, остальные — в блоке #reviews-more по кнопке.
+         Формат одной карточки:
+         <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Текст</p><footer class="review__author">Имя Ф. <span class="review__date">месяц год</span></footer></blockquote> -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="section__title">Отзывы</h2>
+        <span class="sprig sprig--reviews" data-sprig aria-hidden="true"></span>
+
+        <p class="reviews__rating">
+          <span class="reviews__score">5,0</span>
+          <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews__note">средняя оценка по&nbsp;33&nbsp;отзывам <a href="https://vk.ru/reviews-183791063" target="_blank" rel="noopener">ВКонтакте</a></span>
+        </p>
+
+        <div class="reviews__grid">
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Очень рада, что попала к&nbsp;Софии на&nbsp;педикюр и&nbsp;маникюр... Ответственный мастер, профессиональный, умеет общаться, чувствует настроение клиента... Ненавязчиво может сделать предложение, что лучше для клиента... Полностью оборудовано помещение, чистое, светлое... София всегда в&nbsp;спец. одежде. Я&nbsp;не&nbsp;нахожу никаких недостатков, всё продумано для удобства посетителей... Советую этого мастера, «лучше один раз попробовать, чем 100 раз услышать»</p><footer class="review__author">Светлана У. <span class="review__date">март 2026</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Мастер большой профессионал. Долго не&nbsp;могла найти хорошего мастера. Маникюр и&nbsp;педикюр теперь делаю регулярно только у&nbsp;Сони. Ноготочки держатся отлично! Рекомендую!</p><footer class="review__author">Надя Б. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Мастера маникюра Софию мне посоветовала старшая дочь. Приятное получилось знакомство!<br>Великолепное общение! Много оказалось общих тем для разговора.<br>Высокий профессионализм!<br>Спасибо, София!</p><footer class="review__author">Светлана О. <span class="review__date">март 2026</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Очень хороший мастер) Работа выполняется аккуратно, быстро, качественно. Ноготки носятся без сколов.<br>P.s. Ну очень удобное кресло для педикюра</p><footer class="review__author">Виктория М. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Уже 6 лет делаю маникюр у&nbsp;Софии. Сервис на&nbsp;высшем уровне, все стерильно, чисто. Я&nbsp;в&nbsp;восторге</p><footer class="review__author">Жаннет З. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Была первый раз на&nbsp;педикюре, и&nbsp;явно не&nbsp;последний! Комфортная обстановка, очень все аккуратно.</p><footer class="review__author">Лидия А. <span class="review__date">июль 2026</span></footer></blockquote>
+        </div>
+
+        <div class="reviews__grid more__rest" id="reviews-more" hidden>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Была на&nbsp;педикюре, все понравилось, работа выполнена хорошо, спасибо за&nbsp;дополнительные рекомендации)</p><footer class="review__author">Надежда Б. <span class="review__date">июль 2026</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Искала очень долго профессионала своего дела! Соня является именно таким мастером! Очень внимательная, аккуратная и&nbsp;скурпулезная.</p><footer class="review__author">Оля Д. <span class="review__date">март 2026</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Приятное общение, профессиональная работа.</p><footer class="review__author">Любовь Ш. <span class="review__date">март 2025</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Прекрасный мастер! Отлично выполняет свою работу, каждый раз ухожу от&nbsp;нее в&nbsp;восторге! Всем советую! :)</p><footer class="review__author">Yuna H. <span class="review__date">март 2025</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Отличный мастер</p><footer class="review__author">Виктория А. <span class="review__date">март 2025</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Отличный мастер, быстро и&nbsp;качественно</p><footer class="review__author">Анна А. <span class="review__date">март 2025</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Была у&nbsp;Софии на&nbsp;маникюре первый раз, очень аккуратно все сделала. Спасибо большое. Очень уютная и&nbsp;спокойная обстановка. Хороший мастер.</p><footer class="review__author">Лариса Д. <span class="review__date">март 2025</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Была на&nbsp;маникюре у&nbsp;Софии в&nbsp;первый раз. Мне очень понравилось. Прекрасное общение, уютная обстановка. Маникюр мне понравился! Спасибо!!!</p><footer class="review__author">Наталья К. <span class="review__date">январь 2025</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Лучший мастер маникюра<br>Все делает качественно, ногти в&nbsp;носке держатся отлично<br>Рекомендую 100%</p><footer class="review__author">Александра А. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Этот мастер с&nbsp;большой буквы. Профессионал своего дела, всегда все на&nbsp;высшем уровне!!! Материалы подобраны качественные, всегда чисто и&nbsp;рабочее место без единой пыли, это очень важный момент. Работы выполняет с&nbsp;душой и&nbsp;так как именно просит клиент!!! Рекомендую этого замечательного мастера однозначно и&nbsp;вы не&nbsp;пожалеете ни&nbsp;на&nbsp;секунду</p><footer class="review__author">Светлана Б. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Все было выполнено качественно и&nbsp;красиво</p><footer class="review__author">Евгения В. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Очень довольна мастером и&nbsp;работой. София работает аккуратно, качественно, учитывает все пожелания. Рекомендую!</p><footer class="review__author">Татьяна Р. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Молодец, всё аккуратно и&nbsp;красиво. Мастер своего дела</p><footer class="review__author">Елена П. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Великолепное обслуживание, качественная работа, мне всё очень нравится!</p><footer class="review__author">Татьяна Ч. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Лучший мастер )</p><footer class="review__author">Даша З. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Замечательная работа мастера, аккуратные ногти, долго держится покрытие, большое спасибо,<br>Рекомендую, оценка 5</p><footer class="review__author">Татьяна Б. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Отличный маникюр и&nbsp;педикюр) Качественно и&nbsp;быстро)</p><footer class="review__author">Алла М. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Все всегда на&nbsp;высшем уровне — атмосфера, общение, качество работы</p><footer class="review__author">Марина Б. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Мне всё нравится: чисто, быстро и&nbsp;очень качественно! Хожу уже несколько лет и&nbsp;всегда довольна результатом)</p><footer class="review__author">Ольга Ф. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Самый лучший мастер, хожу уже четыре года</p><footer class="review__author">Дарья К. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Мне очень нравится мастер, ее профессионализм, стойкость и&nbsp;носка работ, атмосфера на&nbsp;процедуре)) Очень нравится, как работает мастер))<br>Мастер приятная в&nbsp;общении, все инструменты чистенькие))<br>Весьма рекомендую))</p><footer class="review__author">Олька М. <span class="review__date">ноябрь 2024</span></footer></blockquote>
+          <blockquote class="review"><p class="review__stars" aria-label="Оценка: 5 из 5">★★★★★</p><p class="review__text">Была первый раз, сделали и&nbsp;педикюр и&nbsp;маникюр, быстро, качественно, деликатно, бережно<br>Приятная и&nbsp;легкая обстановка, София мастер своего дела</p><footer class="review__author">Мария Л. <span class="review__date">октябрь 2024</span></footer></blockquote>
+        </div>
+
+        <div class="more__bar">
+          <button class="btn btn--ghost more__btn" type="button" aria-expanded="false" aria-controls="reviews-more"
+                  data-more-text="Показать ещё отзывы" data-less-text="Свернуть">Показать ещё отзывы</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== КОНТАКТЫ ДЛЯ ЗАПИСИ ===== -->
+    <section class="section contacts" id="contacts">
+      <div class="container">
+      <div class="contacts__inner">
+        <span class="sprig sprig--contacts" data-sprig aria-hidden="true"></span>
+        <h2 class="section__title">Контакты для&nbsp;записи</h2>
+
+        <div class="contacts__body">
+          <dl class="contacts__list">
+            <div>
+              <dt>ВКонтакте</dt>
+              <dd><a href="https://vk.ru/sofia_nailz" target="_blank" rel="noopener">vk.ru/sofia_nailz</a></dd>
+            </div>
+            <div>
+              <dt>Телефон</dt>
+              <dd><a href="tel:+79992381992">+7&nbsp;999&nbsp;238-19-92</a></dd>
+            </div>
+            <div>
+              <dt>Где</dt>
+              <dd>г.&nbsp;Волосово. Точный адрес сообщу при&nbsp;записи</dd>
+            </div>
+            <div>
+              <dt>Группа с&nbsp;работами</dt>
+              <dd><a href="https://vk.ru/club.beauty.volosovo" target="_blank" rel="noopener">vk.ru/club.beauty.volosovo</a></dd>
+            </div>
+          </dl>
+
+          <div class="contacts__buttons">
+            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Написать в&nbsp;ВК</a>
+            <a class="btn btn--ghost" href="tel:+79992381992">Позвонить</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== ПОДВАЛ ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__name">София Шумилина</span>
+        <span class="footer__sub">маникюр и педикюр · Волосово</span>
+      </div>
+      <nav class="footer__links" aria-label="Контакты">
+        <a href="tel:+79992381992">+7&nbsp;999&nbsp;238-19-92</a>
+        <a href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Написать в&nbsp;ВК</a>
+        <a href="https://vk.ru/club.beauty.volosovo" target="_blank" rel="noopener">Группа с&nbsp;работами</a>
+      </nav>
+      <a class="footer__top" href="#top">Наверх ↑</a>
+    </div>
+    <p class="container footer__copy">© 2026 София Шумилина</p>
+  </footer>
+
+  <!-- Просмотр фото крупно -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Просмотр фото">
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Закрыть">×</button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Предыдущее фото">‹</button>
+    <img class="lightbox__img" alt="">
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Следующее фото">›</button>
+    <p class="lightbox__count" aria-live="polite"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
