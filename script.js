@@ -203,13 +203,13 @@ const REVEAL = [
   ['.care__quote', 'land'],
   ['.works__item', 'land'],
   ['.works__cell', 'land'],
-  ['.prices__card', 'unfurl'],
+  ['.prices__card', 'rise'],    // высокая карточка: не прячем целиком, иначе на телефоне видна «дыра»
   ['.price-list li', 'row'],
   ['.prices__group-title', 'rise'],
   ['.certs__item', 'land'],
   ['.reviews__rating', 'rise'],
   ['.review', 'rise'],
-  ['.contacts__inner', 'unfurl'],
+  ['.contacts__inner', 'rise'],
   ['.more__bar', 'rise'],
   ['.footer__inner', 'rise'],
 ];
@@ -236,22 +236,36 @@ if (MOTION && 'IntersectionObserver' in window) {
   });
   if (years) years.textContent = '0';
 
+  // Блоки, спрятанные через clip-path (unfurl, write), имеют «нулевую площадь»,
+  // и браузер не сообщает, что они на экране. Поэтому за ними следит их родитель,
+  // который виден всегда, а показываем — сам блок.
+  const watchers = new Map();   // за кем следим -> какие блоки показать
+  const watchOf = (el) => (el.dataset.rv === 'unfurl' || el.dataset.rv === 'write') ? el.parentElement : el;
+
+  const reveal = (el, k) => {
+    const delay = Math.min(k, 6) * 90;
+    el.style.setProperty('--d', `${delay}ms`);
+    el.classList.add('is-in');
+    // после появления убираем задержку, чтобы наведение мышкой срабатывало сразу
+    setTimeout(() => el.style.setProperty('--d', '0ms'), delay + 1600);
+    if (el.classList.contains('fact--years') && years) countUp(years, 7);
+  };
+
   const io = new IntersectionObserver((entries) => {
-    const shown = entries.filter((e) => e.isIntersecting).map((e) => e.target);
     // то, что появилось одновременно, — по очереди, с небольшим шагом
-    shown.forEach((el, k) => {
-      const delay = Math.min(k, 6) * 90;
-      el.style.setProperty('--d', `${delay}ms`);
-      el.classList.add('is-in');
-      io.unobserve(el);
-      // после появления убираем задержку, чтобы наведение мышкой срабатывало сразу
-      setTimeout(() => el.style.setProperty('--d', '0ms'), delay + 1600);
-
-      if (el.classList.contains('fact--years') && years) countUp(years, 7);
+    let k = 0;
+    entries.filter((e) => e.isIntersecting).forEach((e) => {
+      (watchers.get(e.target) || []).forEach((el) => reveal(el, k++));
+      watchers.delete(e.target);
+      io.unobserve(e.target);
     });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  }, { rootMargin: '0px 0px -40px 0px', threshold: 0 });   // появляется, как только край заглянул на экран
 
-  document.querySelectorAll('.rv, [data-sprig]').forEach((el) => io.observe(el));
+  document.querySelectorAll('.rv, [data-sprig]').forEach((el) => {
+    const w = watchOf(el);
+    if (!watchers.has(w)) { watchers.set(w, []); io.observe(w); }
+    watchers.get(w).push(el);
+  });
 } else {
   // Без анимаций: ветки сразу нарисованы, «волны» стоят на месте
   document.querySelectorAll('[data-sprig]').forEach((el) => el.classList.add('is-in'));
