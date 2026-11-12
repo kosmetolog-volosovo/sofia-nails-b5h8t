@@ -1403,3 +1403,40 @@ html.motion .faq__item[open] .faq__a { animation: k-rise .45s ease both; }
 
   .nav { gap: 22px; }
 }
+
+/* =========================================================
+   ГЛАВНЫЙ ЦВЕТ — ИЗУМРУДНЫЙ (просьба Софии 12.11.2026)
+   Кнопки, заголовки и крупные плашки — в зелёной гамме,
+   медь остаётся мелким акцентом (цены, звёзды, рукописные подписи,
+   контур у фото, стебли веток). Чтобы вернуть прежние цвета —
+   удалить этот блок целиком.
+   ========================================================= */
+:root { --emerald-hover: #1F5A47; }
+
+.section__title { color: var(--emerald); }
+
+.btn--copper { background: var(--emerald); color: var(--cream); }
+.btn--copper:hover { background: var(--emerald-hover); }
+.btn--ghost { border-color: var(--emerald); color: var(--emerald); }
+.btn--ghost:hover { background: var(--sage-soft); }
+
+.nav a.nav__cta { background: var(--emerald); color: var(--cream); }
+.nav a.nav__cta:hover { background: var(--emerald-hover); }
+.nav a { border-bottom-color: var(--sage-soft); }
+.burger { background: var(--sage-soft); }
+
+/* крупные тёплые плашки — в светло-зелёные */
+.prices__card { background: var(--sage-soft); }
+.price-list li::after { border-bottom-color: rgba(15, 61, 48, .28); }
+.care { background: #E3EAE3; }
+.care__quote { box-shadow: 0 8px 22px rgba(15, 61, 48, .08); }
+
+.footer { border-top-color: var(--sage); }
+.footer__top { background: var(--sage-soft); color: var(--emerald); }
+.footer__top:hover { background: var(--emerald); color: var(--cream); }
+
+.faq__list,
+.faq__item { border-color: var(--sage); }
+.faq__item summary:hover .faq__q { color: var(--sage); }
+.faq__item[open] .faq__icon { background: var(--emerald); }
+.lightbox__btn:hover { background: var(--sage); }
