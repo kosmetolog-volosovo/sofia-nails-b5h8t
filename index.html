@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:ital,wght@0,500;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body id="top">
 
@@ -47,6 +47,7 @@
         <a href="#prices">Услуги</a>
         <a href="#certificates">Сертификаты</a>
         <a href="#reviews">Отзывы</a>
+        <a href="#faq">Вопросы</a>
         <a href="#contacts" class="nav__cta">Записаться</a>
       </nav>
     </div>
@@ -100,6 +101,14 @@
       <div class="container">
         <h2 class="section__title">Обо мне</h2>
         <span class="sprig sprig--about" data-sprig aria-hidden="true"></span>
+
+        <!-- Текст Софии (прислала 12.11.2026 в Kwork), разбит на абзацы -->
+        <div class="about__intro">
+          <p class="about__hello">Приветствую!</p>
+          <p>Меня зовут София. Я&nbsp;мастер маникюра и&nbsp;педикюра с&nbsp;опытом работы более 7&nbsp;лет. Для&nbsp;меня важно, чтобы Вы чувствовали себя комфортно в&nbsp;моём пространстве на&nbsp;процедуре.</p>
+          <p>Я&nbsp;уделяю особое внимание стерильности (использую сухожар, автоклав, одноразовые материалы) и&nbsp;безопасности. Люблю сочетать эстетику с&nbsp;заботой о&nbsp;здоровье ногтей и&nbsp;кожи.</p>
+          <p>Всегда подскажу и&nbsp;помогу в&nbsp;выборе домашнего ухода.</p>
+        </div>
 
         <div class="about__facts">
           <div class="fact fact--years">
@@ -255,6 +264,28 @@
       </div>
     </section>
 
+    <!-- ===== ПОДАРОЧНЫЙ СЕРТИФИКАТ ===== -->
+    <!-- Фото прислала София 12.11.2026. Текст — только то, что есть на самой карточке
+         (кому, на сумму или услугу, срок действия), цен и сроков не придумываем -->
+    <section class="section gift" id="gift">
+      <div class="container gift__inner">
+        <div class="gift__photos">
+          <a class="zoom gift__photo gift__photo--1" href="img/gift/gift-1-big.webp" data-gallery="gift"><img src="img/gift/gift-1.webp" alt="Подарочный сертификат NAILS в крафтовом конверте с лентой" width="844" height="900" loading="lazy"></a>
+          <a class="zoom gift__photo gift__photo--2" href="img/gift/gift-2-big.webp" data-gallery="gift"><img src="img/gift/gift-2.webp" alt="Подарочный сертификат: кому, на сумму или услугу, срок действия" width="894" height="900" loading="lazy"></a>
+        </div>
+        <div class="gift__text">
+          <h2 class="section__title">Подарочный сертификат</h2>
+          <p class="gift__lead">Маникюр или педикюр в&nbsp;подарок&nbsp;— на&nbsp;сумму или на&nbsp;конкретную услугу.</p>
+          <p class="gift__note">В&nbsp;сертификате указывается, кому он&nbsp;предназначен, на&nbsp;какую сумму или услугу и&nbsp;до&nbsp;какого числа действует.</p>
+          <p class="gift__note">Чтобы заказать сертификат, напишите мне в&nbsp;ВК или позвоните.</p>
+          <div class="gift__buttons">
+            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Заказать в&nbsp;ВК</a>
+            <a class="btn btn--ghost" href="tel:+79992381992">Позвонить</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== СЕРТИФИКАТЫ ОБ ОБРАЗОВАНИИ ===== -->
     <section class="section certs" id="certificates">
       <svg class="wave wave--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
@@ -348,6 +379,83 @@
       </div>
     </section>
 
+    <!-- ===== ЧАСТЫЕ ВОПРОСЫ ===== -->
+    <!-- Вопросы и ответы прислала София 12.11.2026. Смысл не менялся, поправлены опечатки и знаки препинания.
+         Работает без скрипта: <details> раскрывается по нажатию. -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <h2 class="section__title">Частые вопросы</h2>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary><span class="faq__num">01</span><span class="faq__q">Как вы обрабатываете инструменты?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>Инструменты проходят несколько этапов: дезинфекция, предстерилизационная очистка, стерилизация (автоклав), а&nbsp;затем хранятся в&nbsp;запечатанных крафт-пакетах с&nbsp;подписанной датой. Вы&nbsp;имеете право попросить показать зону стерилизации.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">02</span><span class="faq__q">Что не&nbsp;рекомендуется делать до/после маникюра?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>До&nbsp;маникюра не&nbsp;рекомендуется использовать любые увлажняющие кремы, масла, делать себе маникюр перед маникюром, так как это не&nbsp;способствует оказанию качественной услуги.</p>
+              <p>Не&nbsp;стоит отрывать покрытие, чтобы помочь мастеру.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">03</span><span class="faq__q">В&nbsp;чём различие между гелем и&nbsp;гель-лаком?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>Гель-лак&nbsp;— это более мягкий материал для ногтей. С&nbsp;гель-лаком нельзя достроить, отремонтировать и&nbsp;качественно доработать архитектуру ногтей.</p>
+              <p>Гель&nbsp;— это более прочный материал, он&nbsp;имеет более сложную схему, но&nbsp;результат сохраняется дольше и&nbsp;ногти имеют правильно выстроенную архитектуру. С&nbsp;гелем можно быть уверенной, что поломки и&nbsp;трещины не&nbsp;страшны.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">04</span><span class="faq__q">Почему ногти печёт в&nbsp;УФ-лампе?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>При помещении рук в&nbsp;лампу проходит процесс полимеризации материала и&nbsp;создаётся тепловой эффект. Насколько он&nbsp;сильный, зависит от&nbsp;материалов, от&nbsp;их&nbsp;количества на&nbsp;ногтях и&nbsp;от&nbsp;мощности лампы.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">05</span><span class="faq__q">Вреден&nbsp;ли гель-лак для ногтей? Правда&nbsp;ли, что ноготь не&nbsp;«дышит» из-за гель-лака?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>Ноготь в&nbsp;принципе не&nbsp;умеет дышать, это заблуждение. Если ваши ногти имеют здоровую структуру и&nbsp;вы&nbsp;не&nbsp;испытываете дискомфорт при носке гель-лака, то&nbsp;в&nbsp;перерыве нет необходимости.</p>
+              <p>Но&nbsp;если всё-таки хочется сделать перерыв в&nbsp;покрытии по&nbsp;здоровью или желанию, то&nbsp;необходимо дождаться, пока отрастёт ноготь. Это занимает примерно 4–6&nbsp;месяцев.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">06</span><span class="faq__q">Из&nbsp;чего складывается стоимость маникюра и&nbsp;педикюра? Почему она постоянно растёт?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>В&nbsp;стоимость маникюра и&nbsp;педикюра включены вложенные средства в&nbsp;оборудование, материалы и&nbsp;повышение квалификации. Труд мастера требует постоянного роста и&nbsp;развития, поэтому качество и&nbsp;здоровье не&nbsp;могут стоить дёшево.</p>
+              <p>Также цены на&nbsp;расходные материалы и&nbsp;цвета растут, как и&nbsp;на&nbsp;любые другие товары.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">07</span><span class="faq__q">На&nbsp;ногах постоянно возникают натоптыши, как от&nbsp;них избавиться?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>Стоит обратить внимание на&nbsp;обувь: правильно&nbsp;ли она подобрана. Может быть, ей&nbsp;необходим правильный подъём или она мала.</p>
+              <p>Всё решает очная консультация. Также важен домашний уход.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">08</span><span class="faq__q">Педикюр&nbsp;— это сезонная процедура?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>Нет, педикюр, так&nbsp;же как и&nbsp;маникюр, необходимо делать регулярно. Подразумевается именно обработка, без покрытия.</p>
+              <p>Это профилактика кожных заболеваний, трещин, натоптышей, врастаний. А&nbsp;также приятный бонус в&nbsp;виде лёгкости и&nbsp;большей уверенности.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary><span class="faq__num">09</span><span class="faq__q">Почему иногда после педикюра пятки быстро «зарастают»?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__a">
+              <p>Основная причина&nbsp;— в&nbsp;домашнем уходе. Мастер в&nbsp;своём кабинете делает 50% работы. Остальные 50% целиком и&nbsp;полностью зависят от&nbsp;клиента, от&nbsp;ежедневного ухода.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq__more">
+          <p>Если Вы&nbsp;не&nbsp;нашли ответа на&nbsp;интересующий Вас вопрос, то&nbsp;пишите в&nbsp;личные сообщения. Я&nbsp;с&nbsp;удовольствием отвечу на&nbsp;все вопросы.</p>
+          <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Задать вопрос в&nbsp;ВК</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== КОНТАКТЫ ДЛЯ ЗАПИСИ ===== -->
     <section class="section contacts" id="contacts">
       <div class="container">
@@ -412,6 +520,6 @@
     <p class="lightbox__count" aria-live="polite"></p>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

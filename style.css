@@ -1258,3 +1258,148 @@ html.motion .care__quote.rv.is-in { transform: rotate(var(--tilt, 0deg)); }
   }
   .footer__links { justify-content: center; }
 }
+
+/* =========================================================
+   «Обо мне» — текст Софии
+   ========================================================= */
+.about__intro {
+  max-width: 640px;
+  margin: -6px 0 36px;
+}
+.about__intro p {
+  margin: 0 0 12px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+.about__intro p:last-child { margin-bottom: 0; }
+.about__hello {
+  font-family: var(--font-hand);
+  font-size: 30px !important;
+  line-height: 1.1 !important;
+  color: var(--copper);
+}
+
+/* =========================================================
+   Подарочный сертификат
+   ========================================================= */
+.gift__inner { display: grid; gap: 36px; align-items: center; }
+
+/* две карточки лежат внахлёст с наклоном, как на столе */
+.gift__photos {
+  position: relative;
+  height: clamp(300px, 92vw, 420px);
+}
+.gift__photo {
+  position: absolute;
+  display: block;
+  width: 62%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 0 26px 0 26px;
+  border: 6px solid var(--paper);
+  box-shadow: 0 16px 34px rgba(140, 90, 62, .18);
+}
+.gift__photo img { width: 100%; height: 100%; object-fit: cover; }
+.gift__photo--1 { left: 0; top: 0; transform: rotate(-4deg); z-index: 1; }
+.gift__photo--2 { right: 0; bottom: 0; transform: rotate(5deg); z-index: 2; }
+.gift__photo:hover { z-index: 3; }
+
+.gift__text .section__title { margin-bottom: 18px; }
+.gift__lead {
+  margin: 0 0 14px;
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--emerald);
+}
+.gift__note { margin: 0 0 10px; font-size: 16px; }
+.gift__buttons {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* анимация «land» не должна сбивать наклон карточек */
+html.motion .gift__photo--1.rv.is-in { transform: rotate(-4deg); }
+html.motion .gift__photo--2.rv.is-in { transform: rotate(5deg); }
+
+/* =========================================================
+   Частые вопросы — раскрываются по нажатию
+   ========================================================= */
+.faq__list {
+  border-top: 1.5px dotted var(--peach);
+}
+.faq__item { border-bottom: 1.5px dotted var(--peach); }
+.faq__item summary {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__num {
+  flex: none;
+  min-width: 30px;
+  font-family: var(--font-hand);
+  font-size: 26px;
+  line-height: 1;
+  color: var(--peach);
+}
+.faq__q {
+  flex: 1;
+  font-family: var(--font-head);
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--emerald);
+  transition: color .2s ease;
+}
+.faq__item summary:hover .faq__q { color: var(--copper); }
+/* значок — листик, при раскрытии поворачивается */
+.faq__icon {
+  flex: none;
+  position: relative;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 0 70% 0 70%;
+  background: var(--sage);
+  transition: transform .35s cubic-bezier(.3, 1.4, .5, 1), background-color .2s ease;
+}
+.faq__item[open] .faq__icon { transform: rotate(90deg); background: var(--copper); }
+.faq__a { padding: 0 0 18px 44px; }
+.faq__a p { margin: 0 0 10px; font-size: 16px; line-height: 1.65; }
+.faq__a p:last-child { margin-bottom: 0; }
+html.motion .faq__item[open] .faq__a { animation: k-rise .45s ease both; }
+
+.faq__more {
+  margin-top: 32px;
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+.faq__more p {
+  margin: 0;
+  max-width: 560px;
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--emerald);
+}
+
+@media (min-width: 600px) {
+  .gift__buttons { flex-direction: row; flex-wrap: wrap; }
+}
+@media (min-width: 960px) {
+  .gift__inner { grid-template-columns: 1fr 1fr; gap: 72px; }
+  .gift__photos { height: 440px; }
+
+  .faq__list { column-count: 1; }
+  .faq__q { font-size: 20px; }
+  .faq__more { grid-template-columns: 1fr auto; align-items: center; }
+
+  .nav { gap: 22px; }
+}

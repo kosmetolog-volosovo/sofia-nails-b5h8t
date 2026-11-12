@@ -196,6 +196,7 @@ window.addEventListener('scroll', onScroll, { passive: true });
 // row    — строка прайса выезжает, пунктир дорисовывается
 const REVEAL = [
   ['.section__title', 'write'],
+  ['.about__intro', 'rise'],
   ['.fact', 'rise'],
   ['.about__photo', 'unfurl'],
   ['.care__points li', 'row'],
@@ -206,11 +207,15 @@ const REVEAL = [
   ['.prices__card', 'rise'],    // высокая карточка: не прячем целиком, иначе на телефоне видна «дыра»
   ['.price-list li', 'row'],
   ['.prices__group-title', 'rise'],
+  ['.gift__photo', 'land'],
+  ['.gift__text', 'rise'],
   ['.certs__item', 'land'],
   ['.reviews__rating', 'rise'],
   ['.review', 'rise'],
   ['.contacts__inner', 'rise'],
   ['.more__bar', 'rise'],
+  ['.faq__item', 'rise'],
+  ['.faq__more', 'rise'],
   ['.footer__inner', 'rise'],
 ];
 
