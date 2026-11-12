@@ -1449,3 +1449,9 @@ body { background: #E5ECE5; }
 .prices__card,
 .contacts__inner { background: var(--paper); }
 .hero__facts li { background: var(--paper); }
+
+/* Рукописные заголовки разделов — медные: тёплый акцент на зелёном фоне
+   (12.11.2026, по сравнению «изумрудные / медные»). На тёмной полосе
+   сертификатов заголовок остаётся кремовым. */
+.section__title { color: var(--copper); }
+.certs .section__title { color: var(--cream); }
