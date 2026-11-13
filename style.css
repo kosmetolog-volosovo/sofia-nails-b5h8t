@@ -1077,13 +1077,13 @@ html.motion .lightbox__img.is-anim  { animation: k-zoomin .45s cubic-bezier(.2, 
 @media (min-width: 960px) {
   .sprig--hero { width: 82%; top: -14%; left: -38%; }
   .sprig--about { width: 230px; top: -104px; }
-  .sprig--reviews { width: 220px; top: -44px; }   /* выше — листья не касаются строки под оценкой */
+  .sprig--reviews { width: 220px; top: -50px; }   /* выше — листья не касаются строки под оценкой */
   .sprig--prices { width: 250px; top: -84px; right: 64px; }
   .sprig--contacts {
     width: 280px;
     top: auto;
-    right: -40px;
-    bottom: -40px;
+    right: -50px;
+    bottom: -48px;
     transform: scaleX(-1) rotate(160deg);
   }
 }
