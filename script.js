@@ -201,6 +201,8 @@ const REVEAL = [
   ['.about__photo', 'unfurl'],
   ['.care__points li', 'row'],
   ['.care__photo', 'land'],
+  ['.room__title', 'rise'],
+  ['.room__photo', 'land'],
   ['.care__label', 'rise'],
   ['.care__quote', 'land'],
   ['.works__item', 'land'],

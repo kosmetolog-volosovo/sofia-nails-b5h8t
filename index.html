@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:ital,wght@0,500;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body id="top">
 
@@ -187,6 +187,18 @@
                 <figcaption>Олька М.</figcaption>
               </figure>
             </div>
+          </div>
+        </div>
+
+        <!-- Мой кабинет: 4 фото от Софии (13.11.2026). Ширина каждого фото пропорциональна его форме
+             (--ar = ширина / высота), поэтому все фото в ряду одной высоты и ничего не обрезается -->
+        <div class="room">
+          <p class="room__title">Мой кабинет</p>
+          <div class="room__row">
+            <a class="zoom room__photo" style="--ar: 1.333" href="img/cabinet/room-1-big.webp" data-gallery="room"><img src="img/cabinet/room-1.webp" alt="Кабинет: рабочее место для маникюра, кресло для педикюра и стеллаж с материалами" width="1000" height="750" loading="lazy"></a>
+            <a class="zoom room__photo" style="--ar: 0.75" href="img/cabinet/room-2-big.webp" data-gallery="room"><img src="img/cabinet/room-2.webp" alt="Рабочее место для маникюра с лампой и вытяжкой" width="750" height="1000" loading="lazy"></a>
+            <a class="zoom room__photo" style="--ar: 0.75" href="img/cabinet/room-3-big.webp" data-gallery="room"><img src="img/cabinet/room-3.webp" alt="Кресло для педикюра" width="750" height="1000" loading="lazy"></a>
+            <a class="zoom room__photo" style="--ar: 0.75" href="img/cabinet/room-4-big.webp" data-gallery="room"><img src="img/cabinet/room-4.webp" alt="Кресло для педикюра у окна" width="750" height="1000" loading="lazy"></a>
           </div>
         </div>
       </div>
@@ -534,6 +546,6 @@
     <p class="lightbox__count" aria-live="polite"></p>
   </div>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
