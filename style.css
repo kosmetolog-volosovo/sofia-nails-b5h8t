@@ -1070,14 +1070,14 @@ html.motion .lightbox__img.is-anim  { animation: k-zoomin .45s cubic-bezier(.2, 
 
 /* ---------- Ветки на планшете и ПК ---------- */
 @media (min-width: 600px) {
-  .sprig--about   { width: 200px; }
+  .sprig--about   { width: 200px; top: -22px; }   /* выше — чтобы не касаться первой строки текста */
   .sprig--reviews { width: 180px; }
   .sprig--prices  { width: 220px; top: -70px; right: 48px; }
 }
 @media (min-width: 960px) {
   .sprig--hero { width: 82%; top: -14%; left: -38%; }
   .sprig--about { width: 230px; top: -104px; }
-  .sprig--reviews { width: 220px; top: -30px; }
+  .sprig--reviews { width: 220px; top: -44px; }   /* выше — листья не касаются строки под оценкой */
   .sprig--prices { width: 250px; top: -84px; right: 64px; }
   .sprig--contacts {
     width: 280px;
@@ -1085,6 +1085,17 @@ html.motion .lightbox__img.is-anim  { animation: k-zoomin .45s cubic-bezier(.2, 
     right: -40px;
     bottom: -40px;
     transform: scaleX(-1) rotate(160deg);
+  }
+}
+/* Узкие ноутбуки: справа от кнопок места нет (ветка залезала на «Позвонить»),
+   поэтому ставим её в пустую левую часть карточки, под заголовок */
+@media (min-width: 960px) and (max-width: 1199px) {
+  .sprig--contacts {
+    width: 230px;
+    left: 12%;
+    right: auto;
+    bottom: 64px;
+    transform: rotate(-10deg);
   }
 }
 
