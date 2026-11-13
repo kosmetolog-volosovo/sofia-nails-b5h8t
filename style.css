@@ -1020,9 +1020,11 @@ html.motion .sp-berry { fill-opacity: 0; }
 html.motion .sprig.is-in .sp { stroke-dashoffset: 0; }
 html.motion .sprig.is-in .sp-leaf,
 html.motion .sprig.is-in .sp-berry { fill-opacity: 1; }
+/* backwards: пока ветка рисуется, она уже стоит в стартовом наклоне качания,
+   иначе на 3,5 с её рывком поворачивает на 1,6° (было видно на первом экране) */
 html.motion .sprig.is-in svg {
   transform-origin: 5% 90%;
-  animation: k-sway 8s ease-in-out 3.5s infinite alternate;
+  animation: k-sway 8s ease-in-out 3.5s infinite alternate backwards;
 }
 
 /* ---------- Появление блоков при прокрутке (классы ставит script.js) ---------- */
