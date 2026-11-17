@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Lora:ital,wght@0,500;1,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=13">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body id="top">
 
@@ -56,29 +56,31 @@
     <section class="hero">
       <div class="hero__inner">
         <div class="hero__text">
-          <h1 class="hero__title">
+          <!-- Тексты с пометкой data-f берутся из Google Таблицы (лист «О себе»).
+               То, что написано здесь, — запасной вариант, если таблица недоступна -->
+          <h1 class="hero__title" data-f="Заголовок">
             Маникюр и&nbsp;педикюр, в&nbsp;который
             <span class="hand hero__hand">хочется возвращаться</span>
           </h1>
 
           <ul class="hero__lines">
-            <li>Эстетика, стерильность и&nbsp;сервис в&nbsp;кабинете</li>
-            <li>Профессиональный уход за&nbsp;руками и&nbsp;ногами</li>
+            <li data-f="Подзаголовок" data-optional>Эстетика, стерильность и&nbsp;сервис в&nbsp;кабинете</li>
+            <li data-f="Подзаголовок 2" data-optional>Профессиональный уход за&nbsp;руками и&nbsp;ногами</li>
           </ul>
 
           <div class="hero__buttons">
             <!-- Личные сообщения страницы Софии ВК (по её просьбе, не сообщения группы) -->
-            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">
+            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener" data-link="vk">
               Записаться в&nbsp;ВК
             </a>
-            <a class="btn btn--ghost" href="tel:+79992381992">Позвонить</a>
+            <a class="btn btn--ghost" href="tel:+79992381992" data-link="tel">Позвонить</a>
           </div>
 
           <!-- Короткие факты — всё взято с сайта: отзывы ВК, «Обо мне», грамота -->
           <ul class="hero__facts">
-            <li><a href="#reviews"><b>5,0&nbsp;★</b> по&nbsp;33&nbsp;отзывам ВКонтакте</a></li>
-            <li><b>7&nbsp;лет</b> опыта</li>
-            <li><b>1&nbsp;место</b> на&nbsp;чемпионате KANE&nbsp;2026</li>
+            <li><a href="#reviews" data-reviews-count><b data-rating-star>5,0&nbsp;★</b> по&nbsp;33&nbsp;отзывам ВКонтакте</a></li>
+            <li><b data-years>7&nbsp;лет</b> опыта</li>
+            <li data-f="Достижение в первом экране" data-optional data-bold><b>1&nbsp;место</b> на&nbsp;чемпионате KANE&nbsp;2026</li>
           </ul>
         </div>
 
@@ -100,23 +102,24 @@
         <span class="sprig sprig--about" data-sprig aria-hidden="true"></span>
 
         <!-- Текст Софии (прислала 12.11.2026 в Kwork), разбит на абзацы -->
-        <div class="about__intro">
-          <p class="about__hello">Приветствую!</p>
-          <p>Меня зовут София. Я&nbsp;мастер маникюра и&nbsp;педикюра с&nbsp;опытом работы более 7&nbsp;лет. Для&nbsp;меня важно, чтобы Вы чувствовали себя комфортно в&nbsp;моём пространстве на&nbsp;процедуре.</p>
-          <p>Я&nbsp;уделяю особое внимание стерильности (использую ультразвуковую мойку, автоклав, одноразовые материалы) и&nbsp;безопасности. Люблю сочетать эстетику с&nbsp;заботой о&nbsp;здоровье ногтей и&nbsp;кожи.</p>
-          <p>Всегда подскажу и&nbsp;помогу в&nbsp;выборе домашнего ухода.</p>
+        <!-- «О себе» из таблицы: каждая строка ячейки — отдельный абзац (заменяют абзацы с data-para) -->
+        <div class="about__intro" data-paras="О себе">
+          <p class="about__hello" data-f="Приветствие" data-optional>Приветствую!</p>
+          <p data-para>Меня зовут София. Я&nbsp;мастер маникюра и&nbsp;педикюра с&nbsp;опытом работы более 7&nbsp;лет. Для&nbsp;меня важно, чтобы Вы чувствовали себя комфортно в&nbsp;моём пространстве на&nbsp;процедуре.</p>
+          <p data-para>Я&nbsp;уделяю особое внимание стерильности (использую ультразвуковую мойку, автоклав, одноразовые материалы) и&nbsp;безопасности. Люблю сочетать эстетику с&nbsp;заботой о&nbsp;здоровье ногтей и&nbsp;кожи.</p>
+          <p data-para>Всегда подскажу и&nbsp;помогу в&nbsp;выборе домашнего ухода.</p>
         </div>
 
         <div class="about__facts">
           <div class="fact fact--years">
             <p class="fact__big">7</p>
-            <p class="fact__text">лет опыта</p>
+            <p class="fact__text" data-years-word>лет опыта</p>
           </div>
           <div class="fact">
-            <p class="fact__text fact__text--lead">Комфортная обстановка и&nbsp;индивидуальный подход</p>
+            <p class="fact__text fact__text--lead" data-f="Плашка" data-optional data-hide=".fact">Комфортная обстановка и&nbsp;индивидуальный подход</p>
           </div>
           <div class="fact">
-            <p class="fact__text">
+            <p class="fact__text" data-f="Достижение" data-optional data-hide=".fact">
               Участник и&nbsp;победитель Всероссийского чемпионата по&nbsp;педикюру KANE&nbsp;2026
               в&nbsp;категории&nbsp;«Юниор»
             </p>
@@ -243,7 +246,8 @@
     </section>
 
     <!-- ===== УСЛУГИ (ПРАЙС) ===== -->
-    <!-- Строки можно копировать: одна строка = одна услуга -->
+    <!-- Прайс строится из листа «Услуги» Google Таблицы (script.js, renderPrices).
+         Строки ниже — запасной вариант, если таблица недоступна. Одна строка = одна услуга -->
     <section class="section prices" id="prices">
       <div class="container">
         <div class="prices__card">
@@ -296,14 +300,15 @@
           <a class="zoom gift__photo gift__photo--1" href="img/gift/gift-1-big.webp" data-gallery="gift"><img src="img/gift/gift-1.webp" alt="Подарочный сертификат NAILS в крафтовом конверте с лентой" width="844" height="900" loading="lazy"></a>
           <a class="zoom gift__photo gift__photo--2" href="img/gift/gift-2-big.webp" data-gallery="gift"><img src="img/gift/gift-2.webp" alt="Подарочный сертификат: кому, на сумму или услугу, срок действия" width="894" height="900" loading="lazy"></a>
         </div>
-        <div class="gift__text">
+        <!-- Абзацы — из поля «Подарочный сертификат»: первая строка крупнее (gift__lead), остальные — gift__note -->
+        <div class="gift__text" data-paras="Подарочный сертификат" data-first-class="gift__lead" data-class="gift__note">
           <h2 class="section__title">Подарочный сертификат</h2>
-          <p class="gift__lead">Маникюр или педикюр в&nbsp;подарок&nbsp;— на&nbsp;сумму или на&nbsp;конкретную услугу.</p>
-          <p class="gift__note">В&nbsp;сертификате указывается, кому он&nbsp;предназначен, на&nbsp;какую сумму или услугу и&nbsp;до&nbsp;какого числа действует.</p>
-          <p class="gift__note">Чтобы заказать сертификат, напишите мне в&nbsp;ВК или позвоните.</p>
+          <p class="gift__lead" data-para>Маникюр или педикюр в&nbsp;подарок&nbsp;— на&nbsp;сумму или на&nbsp;конкретную услугу.</p>
+          <p class="gift__note" data-para>В&nbsp;сертификате указывается, кому он&nbsp;предназначен, на&nbsp;какую сумму или услугу и&nbsp;до&nbsp;какого числа действует.</p>
+          <p class="gift__note" data-para>Чтобы заказать сертификат, напишите мне в&nbsp;ВК или позвоните.</p>
           <div class="gift__buttons">
-            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Заказать в&nbsp;ВК</a>
-            <a class="btn btn--ghost" href="tel:+79992381992">Позвонить</a>
+            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener" data-link="vk">Заказать в&nbsp;ВК</a>
+            <a class="btn btn--ghost" href="tel:+79992381992" data-link="tel">Позвонить</a>
           </div>
         </div>
       </div>
@@ -356,9 +361,9 @@
         <span class="sprig sprig--reviews" data-sprig aria-hidden="true"></span>
 
         <p class="reviews__rating">
-          <span class="reviews__score">5,0</span>
+          <span class="reviews__score" data-rating>5,0</span>
           <span class="reviews__stars" aria-hidden="true">★★★★★</span>
-          <span class="reviews__note">средняя оценка по&nbsp;всем 33&nbsp;отзывам <a href="https://vk.ru/reviews-183791063" target="_blank" rel="noopener">ВКонтакте</a>. Ниже&nbsp;— отзывы, в&nbsp;которых клиентки поделились впечатлениями</span>
+          <span class="reviews__note" data-reviews-count>средняя оценка по&nbsp;всем 33&nbsp;отзывам <a href="https://vk.ru/reviews-183791063" target="_blank" rel="noopener" data-link="reviews">ВКонтакте</a>. Ниже&nbsp;— отзывы, в&nbsp;которых клиентки поделились впечатлениями</span>
         </p>
 
         <div class="reviews__grid">
@@ -404,7 +409,8 @@
 
     <!-- ===== ЧАСТЫЕ ВОПРОСЫ ===== -->
     <!-- Вопросы и ответы прислала София 12.11.2026. Смысл не менялся, поправлены опечатки и знаки препинания.
-         Работает без скрипта: <details> раскрывается по нажатию. -->
+         Работает без скрипта: <details> раскрывается по нажатию.
+         Список строится из листа «Вопросы» Google Таблицы, вопросы ниже — запасной вариант. -->
     <section class="section faq" id="faq">
       <div class="container">
         <h2 class="section__title">Частые вопросы</h2>
@@ -473,8 +479,8 @@
         </div>
 
         <div class="faq__more">
-          <p>Если Вы&nbsp;не&nbsp;нашли ответа на&nbsp;интересующий Вас вопрос, то&nbsp;пишите в&nbsp;личные сообщения. Я&nbsp;с&nbsp;удовольствием отвечу на&nbsp;все вопросы.</p>
-          <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Задать вопрос в&nbsp;ВК</a>
+          <p data-f="Под вопросами" data-optional>Если Вы&nbsp;не&nbsp;нашли ответа на&nbsp;интересующий Вас вопрос, то&nbsp;пишите в&nbsp;личные сообщения. Я&nbsp;с&nbsp;удовольствием отвечу на&nbsp;все вопросы.</p>
+          <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener" data-link="vk">Задать вопрос в&nbsp;ВК</a>
         </div>
       </div>
     </section>
@@ -488,27 +494,28 @@
 
         <div class="contacts__body">
           <dl class="contacts__list">
+            <!-- Ссылки и телефон — из листа «Контакты и график» (data-link, data-show) -->
             <div>
               <dt>ВКонтакте</dt>
-              <dd><a href="https://vk.ru/sofia_nailz" target="_blank" rel="noopener">vk.ru/sofia_nailz</a></dd>
+              <dd><a href="https://vk.ru/sofia_nailz" target="_blank" rel="noopener" data-link="vkpage" data-show="url">vk.ru/sofia_nailz</a></dd>
             </div>
             <div>
               <dt>Телефон</dt>
-              <dd><a href="tel:+79992381992">+7&nbsp;999&nbsp;238-19-92</a></dd>
+              <dd><a href="tel:+79992381992" data-link="tel" data-show="phone">+7&nbsp;999&nbsp;238-19-92</a></dd>
             </div>
             <div>
               <dt>Где</dt>
-              <dd>г.&nbsp;Волосово. Точный адрес сообщу при&nbsp;записи</dd>
+              <dd data-f="Адрес">г.&nbsp;Волосово. Точный адрес сообщу при&nbsp;записи</dd>
             </div>
             <div>
               <dt>Группа с&nbsp;работами</dt>
-              <dd><a href="https://vk.ru/club.beauty.volosovo" target="_blank" rel="noopener">vk.ru/club.beauty.volosovo</a></dd>
+              <dd><a href="https://vk.ru/club.beauty.volosovo" target="_blank" rel="noopener" data-link="group" data-show="url">vk.ru/club.beauty.volosovo</a></dd>
             </div>
           </dl>
 
           <div class="contacts__buttons">
-            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Написать в&nbsp;ВК</a>
-            <a class="btn btn--ghost" href="tel:+79992381992">Позвонить</a>
+            <a class="btn btn--copper" href="https://vk.me/sofia_nailz" target="_blank" rel="noopener" data-link="vk">Написать в&nbsp;ВК</a>
+            <a class="btn btn--ghost" href="tel:+79992381992" data-link="tel">Позвонить</a>
           </div>
         </div>
       </div>
@@ -525,9 +532,9 @@
         <span class="footer__sub">маникюр и педикюр · Волосово</span>
       </div>
       <nav class="footer__links" aria-label="Контакты">
-        <a href="tel:+79992381992">+7&nbsp;999&nbsp;238-19-92</a>
-        <a href="https://vk.me/sofia_nailz" target="_blank" rel="noopener">Написать в&nbsp;ВК</a>
-        <a href="https://vk.ru/club.beauty.volosovo" target="_blank" rel="noopener">Группа с&nbsp;работами</a>
+        <a href="tel:+79992381992" data-link="tel" data-show="phone">+7&nbsp;999&nbsp;238-19-92</a>
+        <a href="https://vk.me/sofia_nailz" target="_blank" rel="noopener" data-link="vk">Написать в&nbsp;ВК</a>
+        <a href="https://vk.ru/club.beauty.volosovo" target="_blank" rel="noopener" data-link="group">Группа с&nbsp;работами</a>
       </nav>
       <a class="footer__top" href="#top">Наверх ↑</a>
     </div>
@@ -543,6 +550,8 @@
     <p class="lightbox__count" aria-live="polite"></p>
   </div>
 
-  <script src="script.js?v=6"></script>
+  <!-- data.js — номер Google Таблицы, из которой берутся тексты, цены и вопросы -->
+  <script src="data.js?v=1"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
